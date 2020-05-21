@@ -70,7 +70,7 @@ import { ProcessFormRenderingService } from './form/process-form-rendering.servi
     ]
 })
 export class ProcessModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<ProcessModule> {
         return {
             ngModule: ProcessModule,
             providers: [
@@ -88,7 +88,7 @@ export class ProcessModule {
         };
     }
 
-    static forChild(): ModuleWithProviders {
+    static forChild(): ModuleWithProviders<ProcessModule> {
         return {
             ngModule: ProcessModule
         };
