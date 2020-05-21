@@ -457,7 +457,7 @@ describe('ProcessInstanceListComponent', () => {
 
 class CustomProcessListComponent {
 
-    @ViewChild(ProcessInstanceListComponent)
+    @ViewChild(ProcessInstanceListComponent, { static: false })
     processList: ProcessInstanceListComponent;
 }
 
