@@ -53,7 +53,7 @@ describe('ClaimTaskDirective', () => {
     });
 
     beforeEach(() => {
-        taskCloudService = TestBed.get(TaskCloudService);
+        taskCloudService = TestBed.inject(TaskCloudService);
         fixture = TestBed.createComponent(TestComponent);
         fixture.detectChanges();
     });
