@@ -1,7 +1,6 @@
 // tslint:disable: no-var-requires
 // tslint:disable: no-console
 
-import { browser } from 'protractor';
 const path = require('path');
 const { SpecReporter } = require('jasmine-spec-reporter');
 const retry = require('protractor-retry').retry;
@@ -41,6 +40,8 @@ const SAVE_SCREENSHOT = (process.env.SAVE_SCREENSHOT === 'true');
 const LIST_SPECS = process.env.LIST_SPECS || [];
 const LOG = !!process.env.LOG;
 let arraySpecs = [];
+
+declare const browser: any;
 
 if (LOG) {
     console.log('======= PROTRACTOR CONFIGURATION ====== ');
